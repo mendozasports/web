@@ -1,0 +1,137 @@
+        /* --- CSS BÁSICO --- */
+        :root {
+            --color-primary: #000000;
+            --color-accent: #ac1919;
+            --color-light: #f4f4f4;
+            --color-dark-blue: #838383;
+            --nav-bg: #22164d;
+            --whatsapp-green: #25D366; /* Color oficial WhatsApp */
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+        body { background-color: var(--color-light); }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* HEADER */
+        .top-header { background-color: var(--color-dark-blue); color: white; padding: 15px 0; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; }
+        .search-bar { flex-grow: 1; margin: 0 40px; display: flex; }
+        .search-bar input { width: 100%; padding: 10px; border: none; border-radius: 4px 0 0 4px; }
+        .search-bar button { padding: 10px 15px; background: var(--color-accent); border: none; color: white; border-radius: 0 4px 4px 0; cursor: pointer; }
+        .user-actions { display: flex; gap: 20px; font-size: 1.2rem; }
+        
+        /* NAV */
+        .main-nav { background-color: var(--nav-bg); padding: 0 20px; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
+        .menu-list { display: flex; }
+        .menu-list li a { display: block; padding: 15px 20px; color: white; font-weight: 600; text-transform: uppercase; font-size: 0.9rem; transition: background 0.3s; }
+        .menu-list li a:hover { background-color: rgba(0,0,0,0.1); }
+        .btn-contact-nav { background-color: white; color: var(--color-accent); padding: 10px 25px; font-weight: bold; text-transform: uppercase; border-radius: 4px; border: 2px solid white; }
+        /* Invertimos colores en el botón porque estamos en la página activa */
+        
+        /* HERO CONTACTO */
+        .hero-contact {
+            background-color: var(--color-dark-blue);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .hero-contact h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .hero-contact p { font-size: 1.1rem; opacity: 0.8; }
+
+        /* LAYOUT DE CONTACTO (2 Columnas) */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 50% - 50% */
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        /* COLUMNA 1: FORMULARIO */
+        .contact-form-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .contact-form-card h2 { margin-bottom: 20px; color: var(--color-dark-blue); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: bold; color: #555; }
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        .btn-submit {
+            background-color: var(--color-accent);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+            transition: background 0.3s;
+        }
+        .btn-submit:hover { background-color: #e63e00; }
+
+        /* COLUMNA 2: INFO Y MAPA */
+        .contact-info-area h2 { margin-bottom: 20px; color: var(--color-dark-blue); }
+        
+        .info-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .info-box i { font-size: 1.5rem; color: var(--color-accent); margin-top: 5px; }
+        .info-content h3 { font-size: 1.1rem; margin-bottom: 5px; }
+        .info-content p { color: #666; font-size: 0.95rem; line-height: 1.5; }
+
+        /* Botón WhatsApp Especial */
+        .btn-whatsapp {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: var(--whatsapp-green);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+            transition: transform 0.2s;
+        }
+        .btn-whatsapp:hover { transform: translateY(-3px); }
+
+        /* Mapa */
+        .map-container {
+            width: 100%;
+            height: 300px;
+            background-color: #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .map-container iframe { width: 100%; height: 100%; border: 0; }
+
+        /* FOOTER */
+        footer { background-color: #555; color: white; padding: 40px 0; text-align: center; margin-top: auto;}
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .contact-wrapper { grid-template-columns: 1fr; }
+        }

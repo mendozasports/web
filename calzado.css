@@ -1,0 +1,78 @@
+        /* --- CSS BÁSICO (Consistente) --- */
+        :root {
+            --color-primary: #000000;
+            --color-accent: #ac1919;
+            --color-light: #f4f4f4;
+            --color-dark-blue: #838383;
+            --nav-bg: #22164d;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+        body { background-color: var(--color-light); }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* HEADER */
+        .top-header { background-color: var(--color-dark-blue); color: white; padding: 15px 0; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; }
+        .search-bar { flex-grow: 1; margin: 0 40px; display: flex; }
+        .search-bar input { width: 100%; padding: 10px; border: none; border-radius: 4px 0 0 4px; }
+        .search-bar button { padding: 10px 15px; background: var(--color-accent); border: none; color: white; border-radius: 0 4px 4px 0; cursor: pointer; }
+        .user-actions { display: flex; gap: 20px; font-size: 1.2rem; }
+        
+        /* NAV */
+        .main-nav { background-color: var(--nav-bg); padding: 0 20px; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
+        .menu-list { display: flex; }
+        .menu-list li a { display: block; padding: 15px 20px; color: white; font-weight: 600; text-transform: uppercase; font-size: 0.9rem; transition: background 0.3s; }
+        .menu-list li a:hover { background-color: rgba(0,0,0,0.1); }
+        .btn-contact-nav { background-color: #d32f2f; color: white; padding: 10px 25px; font-weight: bold; text-transform: uppercase; border-radius: 4px; }
+
+        /* HERO CALZADO */
+        .hero-shoes {
+            background-image: url('https://via.placeholder.com/1200x300/4CAF50/ffffff?text=CALZADO+DE+ALTO+RENDIMIENTO'); 
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .hero-shoes h1 { font-size: 2.5rem; text-shadow: 2px 2px 5px black; }
+        .hero-shoes p { font-size: 1.2rem; margin-top: 10px; background-color: rgba(0,0,0,0.5); padding: 5px 15px; border-radius: 4px;}
+
+        /* LAYOUT Y FILTROS */
+        .category-layout { display: grid; grid-template-columns: 250px 1fr; gap: 30px; margin-bottom: 50px; }
+        .sidebar-filters { background-color: white; padding: 20px; border-radius: 8px; align-self: start; }
+        .filter-group { margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+        .filter-group h4 { margin-bottom: 12px; color: var(--color-dark-blue); }
+        .filter-list li { margin-bottom: 8px; color: #555; }
+        .filter-list label { cursor: pointer; display: flex; align-items: center; }
+        .filter-list input { margin-right: 10px; }
+        
+        /* Grid de Tallas (Nuevo estilo para esta página) */
+        .size-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+        .size-option { border: 1px solid #ddd; padding: 5px; text-align: center; cursor: pointer; border-radius: 4px; font-size: 0.9rem; }
+        .size-option:hover { background-color: var(--color-light); border-color: #999; }
+
+        /* PRODUCTOS */
+        .toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background: white; padding: 10px 20px; border-radius: 8px; color: #666; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+        .product-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.05); transition: transform 0.3s; }
+        .product-card:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .product-card img { width: 100%; height: 220px; object-fit: cover; }
+        .product-info { padding: 15px; text-align: center; }
+        .product-info h3 { font-size: 1rem; margin-bottom: 10px; height: 40px; overflow: hidden; }
+        .price { color: var(--color-accent); font-weight: bold; font-size: 1.1rem; margin-bottom: 15px; }
+        .btn-add { width: 100%; padding: 10px; background-color: var(--color-dark-blue); color: white; border: none; font-weight: bold; cursor: pointer; }
+
+        /* FOOTER */
+        footer { background-color: #555; color: white; padding: 40px 0; text-align: center; margin-top: auto;}
+        
+        /* Breadcrumb */
+        .breadcrumb { padding: 10px 0; color: #666; font-size: 0.9rem; }
+        .breadcrumb strong { color: var(--color-dark-blue); }

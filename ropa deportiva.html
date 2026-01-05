@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ropa Deportiva </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="ropa deportiva.css">
+
+
+</head>
+<body>
+
+    <header>
+        <div class="top-header">
+            <div class="container header-content">
+                <div class="logo"><a href="index.html"><img src="img/logo.avif" alt=""></a></div>
+                <div class="search-bar">
+                    <form action="#" style="display: flex; width: 100%;">
+                        <input type="text" placeholder="Buscar...">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="user-actions">
+                    <a href="#"><i class="far fa-user"></i></a>
+                    <a href="#"><i class="far fa-heart"></i></a>
+                    <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="nav-container">
+                <ul class="menu-list">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="ropa-deportiva.html" style="background-color: rgba(0,0,0,0.2);">Ropa Deportiva</a></li>
+                    <li><a href="mujer.html">Mujer</a></li>
+                    <li><a href="hombre.html">Hombre</a></li>
+                    <li><a href="calzado.html">Calzado</a></li>
+                    <li><a href="accesorios.html">Accesorios</a></li>
+                    <li><a href="ediciones-especiales.html" style="color: #ffffcc;">Ediciones Especiales</a></li>
+                </ul>
+                <a href="contacto.html" class="btn-contact-nav">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="category-header">
+            <p class="breadcrumb">Inicio > <strong>Ropa Deportiva</strong></p>
+            <h1>Todo en Ropa Deportiva</h1>
+        </section>
+
+        <div class="category-layout">
+            
+            <aside class="sidebar-filters">
+                <h3>Filtrar por</h3>
+                <br>
+                <div class="filter-group">
+                    <h4>Tipo de Prenda</h4>
+                    <ul class="filter-list">
+                        <li><label><input type="checkbox"> Playeras / Tops</label></li>
+                        <li><label><input type="checkbox"> Shorts</label></li>
+                        <li><label><input type="checkbox"> Pants / Leggings</label></li>
+                        <li><label><input type="checkbox"> Sudaderas</label></li>
+                    </ul>
+                </div>
+                <div class="filter-group">
+                    <h4>Género</h4>
+                    <ul class="filter-list">
+                        <li><label><input type="checkbox"> Hombre</label></li>
+                        <li><label><input type="checkbox"> Mujer</label></li>
+                        <li><label><input type="checkbox"> Unisex</label></li>
+                    </ul>
+                </div>
+                <div class="filter-group">
+                    <h4>Talla</h4>
+                    <ul class="filter-list">
+                        <li><label><input type="checkbox"> S (Chica)</label></li>
+                        <li><label><input type="checkbox"> M (Mediana)</label></li>
+                        <li><label><input type="checkbox"> L (Grande)</label></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <section class="product-list-area">
+                
+                <div class="toolbar">
+                    <p>Mostrando 1-12 de 45 resultados</p>
+                    <div>
+                        <label for="sort">Ordenar por: </label>
+                        <select id="sort" class="sort-select">
+                            <option value="relevancia">Relevancia</option>
+                            <option value="precio-asc">Precio: Menor a Mayor</option>
+                            <option value="precio-desc">Precio: Mayor a Menor</option>
+                            <option value="nuevo">Lo más nuevo</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="product-grid">
+                    <article class="product-card">
+                        <img src="img/playera 1.jpg" alt="Playera">
+                        <div class="product-info">
+                            <h3>Playera Entrenamiento Dry-Fit</h3>
+                            <p class="price">$499.00</p>
+                            <button class="btn-add">Agregar</button>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <img src="img/short.jpg" alt="Shorts">
+                        <div class="product-info">
+                            <h3>Shorts Ligeros Running</h3>
+                            <p class="price">$350.00</p>
+                            <button class="btn-add">Agregar</button>
+                        </div>
+                    </article>
+                     <article class="product-card">
+                        <img src="img/leggins.avif" alt="Leggings">
+                        <div class="product-info">
+                            <h3>Leggings Compresión Pro Mujer</h3>
+                            <p class="price">$899.00</p>
+                            <button class="btn-add">Agregar</button>
+                        </div>
+                    </article>
+                     <article class="product-card">
+                        <img src="img/bra.avif" alt="Top">
+                        <div class="product-info">
+                            <h3>Sports Bra Alto Impacto</h3>
+                            <p class="price">$450.00</p>
+                            <button class="btn-add">Agregar</button>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <img src="img/pants.jpeg" alt="Jogger">
+                        <div class="product-info">
+                            <h3>Pants Jogger Casual Hombre</h3>
+                            <p class="price">$799.00</p>
+                            <button class="btn-add">Agregar</button>
+                        </div>
+                    </article>
+                     <article class="product-card">
+                        <img src="img/sudadera.jpg" alt="Sudadera">
+                        <div class="product-info">
+                            <h3>Sudadera con Capucha Térmica</h3>
+                            <p class="price">$1,100.00</p>
+                            <button class="btn-add">Agregar</button>
+                        </div>
+                    </article>
+                     <article class="product-card">
+                        <img src="img/camiseta.jpg" alt="Camiseta">
+                        <div class="product-info">
+                            <h3>Camiseta Técnica Manga Larga</h3>
+                            <p class="price">$550.00</p>
+                            <button class="btn-add">Agregar</button>
+                        </div>
+                    </article>
+                     <article class="product-card">
+                        <img src="img/shorts 2.avif" alt="Biker">
+                        <div class="product-info">
+                            <h3>Shorts Biker Mujer</h3>
+                            <p class="price">$399.00</p>
+                            <button class="btn-add">Agregar</button>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <img src="img/chamarra.jpg" alt="Chamarra">
+                        <div class="product-info">
+                            <h3>Chamarra Cortavientos Ligera</h3>
+                            <p class="price">$1,250.00</p>
+                            <button class="btn-add">Agregar</button>
+                        </div>
+                    </article>
+                </div>
+                 <div style="text-align: center; margin-top: 30px;">
+                    <button style="padding: 10px 20px; border: 1px solid #ccc; background: white; cursor: pointer;">Anterior</button>
+                    <button style="padding: 10px 20px; border: 1px solid var(--color-dark-blue); background: var(--color-dark-blue); color: white; font-weight: bold;">1</button>
+                    <button style="padding: 10px 20px; border: 1px solid #ccc; background: white; cursor: pointer;">2</button>
+                    <button style="padding: 10px 20px; border: 1px solid #ccc; background: white; cursor: pointer;">3</button>
+                    <button style="padding: 10px 20px; border: 1px solid #ccc; background: white; cursor: pointer;">Siguiente</button>
+                 </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Mendoza Sports | Tu tienda de rendimiento deportivo.</p>
+            <p>© 2025 Mendoza Sports. Tecnología de Shopify | Enlaces | Redes Sociales</p>
+        </div>
+    </footer>
+
+</body>
+</html>

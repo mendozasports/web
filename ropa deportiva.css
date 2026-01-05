@@ -1,0 +1,80 @@
+  /* --- CSS BÁSICO (REUTILIZADO DEL INICIO) --- */
+        :root {
+            --color-primary: #000000;
+            --color-accent: #ac1919;
+            --color-light: #f4f4f4;
+            --color-dark-blue: #838383;
+            --nav-bg: #22164d;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+        body { background-color: var(--color-light); }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* HEADER Y NAV (Idéntico al inicio) */
+        .top-header { background-color: var(--color-dark-blue); color: white; padding: 15px 0; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; }
+        .search-bar { flex-grow: 1; margin: 0 40px; display: flex; }
+        .search-bar input { width: 100%; padding: 10px; border: none; border-radius: 4px 0 0 4px; }
+        .search-bar button { padding: 10px 15px; background: var(--color-accent); border: none; color: white; border-radius: 0 4px 4px 0; cursor: pointer; }
+        .user-actions { display: flex; gap: 20px; font-size: 1.2rem; }
+        .main-nav { background-color: var(--nav-bg); padding: 0 20px; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
+        .menu-list { display: flex; }
+        .menu-list li a { display: block; padding: 15px 20px; color: white; font-weight: 600; text-transform: uppercase; font-size: 0.9rem; transition: background 0.3s; }
+        .menu-list li a:hover { background-color: rgba(0,0,0,0.1); }
+        .btn-contact-nav { background-color: #d32f2f; color: white; padding: 10px 25px; font-weight: bold; text-transform: uppercase; border-radius: 4px; }
+
+        /* ESTILOS DE PRODUCTOS (REUTILIZADOS) */
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+        .product-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.05); transition: transform 0.3s; }
+        .product-card:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .product-card img { width: 100%; height: 200px; object-fit: cover; }
+        .product-info { padding: 15px; text-align: center; }
+        .product-info h3 { font-size: 1rem; margin-bottom: 10px; height: 40px; overflow: hidden; }
+        .price { color: var(--color-accent); font-weight: bold; font-size: 1.1rem; margin-bottom: 15px; }
+        .btn-add { width: 100%; padding: 10px; background-color: var(--color-dark-blue); color: white; border: none; font-weight: bold; cursor: pointer; }
+
+        /* --- CSS NUEVO PARA PÁGINA DE CATEGORÍA --- */
+        
+        /* Título y Migas de Pan */
+        .category-header { padding: 20px 0; }
+        .breadcrumb { color: #666; font-size: 0.9rem; margin-bottom: 10px; }
+        .breadcrumb strong { color: var(--color-dark-blue); }
+        
+        /* Layout Principal (Grid de 2 columnas: Sidebar + Contenido) */
+        .category-layout {
+            display: grid;
+            /* Definimos: Sidebar de 250px, el resto para productos */
+            grid-template-columns: 250px 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        /* Barra Lateral de Filtros (Sidebar) */
+        .sidebar-filters {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            align-self: start; /* Evita que se estire si la columna derecha es muy larga */
+        }
+        .filter-group { margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+        .filter-group h4 { margin-bottom: 12px; color: var(--color-dark-blue); }
+        .filter-list li { margin-bottom: 8px; color: #555; }
+        .filter-list label { cursor: pointer; display: flex; align-items: center; }
+        .filter-list input { margin-right: 10px; }
+
+        /* Área de Productos */
+        .toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            background: white; padding: 10px 20px; border-radius: 8px; color: #666;
+        }
+        .sort-select { padding: 8px 12px; border: 1px solid #ddd; border-radius: 4px; color: #555; }
+
+        /* FOOTER (Idéntico) */
+        footer { background-color: #555; color: white; padding: 40px 0; text-align: center; margin-top: auto;}
